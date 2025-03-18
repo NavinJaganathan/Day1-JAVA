@@ -1,0 +1,15 @@
+package day1;
+
+import java.util.Arrays;
+
+public class Arraye_rearrange {
+	public static void main(String[] args) {
+	int[] a= {1,0,3,5,0,0,45};
+	Arrays.sort(a);
+	int b=a.length-1;
+	for(int i=b;i>=0;i--) {
+		System.out.println(a[i]);
+	}
+
+}
+}
