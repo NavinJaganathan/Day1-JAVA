@@ -1,0 +1,23 @@
+package day1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class array_delection {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int[] arr=new int[20];
+		System.out.println("enter the array size:");
+		int size=sc.nextInt();
+		for(int i=0;i<size;i++) {
+			arr[i]=sc.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println("Enter the pos of deletion:");
+		int delpos=sc.nextInt();
+		for(int mypos=delpos-1;mypos<size;mypos++) {
+			arr[mypos]=arr[mypos+1];
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+}
