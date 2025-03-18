@@ -1,0 +1,28 @@
+package day1;
+
+import java.util.Arrays;
+import java.util.Scanner;
+
+public class Array_reverse {
+	public static void main(String[] args) {
+		Scanner sc=new Scanner(System.in);
+		int[] arr=new int[20];
+		System.out.println("enter the array size:");
+		int size=sc.nextInt();
+		for(int i=0;i<size;i++) {
+			arr[i]=sc.nextInt();
+		}
+		System.out.println(Arrays.toString(arr));
+		System.out.println("The Reversed number is:");
+		int left=0;
+		int right=size-1;
+		while(left<right) {
+			int temp=arr[left];
+			arr[left]=arr[right];
+			arr[right]=temp;
+			++left;
+			--right;
+		}
+		System.out.println(Arrays.toString(arr));
+	}
+}
